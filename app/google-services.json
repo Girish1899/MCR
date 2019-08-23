@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "983350692789",
+    "firebase_url": "https://mcrrework.firebaseio.com",
+    "project_id": "mcrrework",
+    "storage_bucket": "mcrrework.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983350692789:android:d7f95bdbf3c06f3a",
+        "android_client_info": {
+          "package_name": "com.example.mcr_rework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983350692789-v6qkttk8r7btujgssfl8ako1ld1toan6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mcr_rework",
+            "certificate_hash": "89a735dcedb434b8d747210c2a825312bae24523"
+          }
+        },
+        {
+          "client_id": "983350692789-3i7mfivhn5kkrev62mfprcjtf1ft6qm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRpskEDwl43MteErzzX7_FD4QGjJ1dDnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983350692789-3i7mfivhn5kkrev62mfprcjtf1ft6qm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
