@@ -42,7 +42,22 @@ public class contactEntryActivity extends AppCompatActivity {
         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users");
 
         PhoneRef = FirebaseDatabase.getInstance().getReference().child("PhoneBook");
-        ContactNameRef = PhoneRef.child("bid").child("currentUserID");
+        UsersRef.child(currentUserID).child("bId").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String business_id=dataSnapshot.getValue(String.class);
+                ContactNameRef = PhoneRef.child("bid").child("currentUserID").child(business_id);
+
+
+//                Log.e("business id",dataSnapshot.getValue(String.class)+"is the value");
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
 
         _nameText = findViewById(R.id.input_name);

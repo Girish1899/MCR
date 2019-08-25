@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,10 +54,22 @@ public class ContactsFragment extends Fragment {
         currentUserID = mAuth.getCurrentUser().getUid();
 
 
+//        FirebaseDatabase.getInstance().getReference().child("Business").equalTo(currentUserID)
+
+
+
         ContactRef = FirebaseDatabase.getInstance().getReference().child("Contacts").child(currentUserID);
         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users");
+        String business_id=UsersRef.child(currentUserID).child(currentUserID).child("bid").toString();
+        Log.e("business id",business_id+" is the value");
+
+
         return ContactView;
     }
+
+
+
+
 
     @Override
     public void onStart() {
